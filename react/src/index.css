@@ -1,0 +1,286 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f0f0f5;
+    -webkit-font-smoothing: antialiased;
+    font-family: "Ubuntu", sans-serif;
+}
+
+.formContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.form {
+    width: 100%;
+    max-width: 400px;
+    background: #fff;
+    border-radius: 8px;
+    padding: 32px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    animation: fadeindown 0.25s ease-in-out;
+}
+
+@keyframes fadeindown {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -50%, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.form h1 {
+    font-size: 1.8rem;
+    margin-bottom: 16px;
+    color: #1a4b83;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #e2e1e1;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    font-size: 1rem;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+input:focus {
+    box-shadow: 0 0 5px rgba(0, 102, 204, 0.5);
+}
+
+input::placeholder {
+    color: #a8a8b3;
+}
+
+input:hover {
+    box-shadow: 0 0 5px rgba(0, 102, 204, 0.9);
+}
+
+button {
+    width: 100%;
+    padding: 8px;
+    border: 0;
+    border-radius: 4px;
+    background: #0e5cb6;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1rem;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    padding: 10px;
+}
+
+button:hover {
+    background: #162b88;
+    box-shadow: 0 0 5px rgba(49, 109, 168, 0.9);
+}
+
+button:active {
+    background: #1f4e83;
+    opacity: 0.6;
+}
+
+#formP {
+    margin-top: 16px;
+    color: #3671b4;
+    font-size: 1.1rem;
+}
+
+.link {
+    color: #0e5cb6;
+    text-decoration: none;
+    margin-top: 16px;
+    font-weight: bold;
+}
+
+.link:hover {
+    color: #4a7b8f;
+    opacity: 0.8;
+}
+
+.registered {
+    display: flex;
+    margin: 0;
+}
+
+aside {
+    background: #0e5cb6;
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+#linkRegistered {
+    width: 100%;
+    color: #fff;
+    font-size: 1.2rem;
+    text-decoration: none;
+    padding: 5px 15px;
+}
+
+#linkRegistered:hover {
+    background-color: #162b88;
+    border-radius: 4px;
+}
+
+#formHeader {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 30px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    height: 80px;
+    width: 100%;
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+}
+
+table {
+    width: 100%;
+}
+
+th {
+    text-align: left;
+    padding: 10px;
+    background-color: #0e5cb6;
+    color: #fff;
+    font-weight: 400;
+}
+
+tr {
+    background-color: #fff;
+    border-bottom: 1px solid #e2e1e1;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+td {
+    padding: 15px;
+}
+
+.th-btn {
+    width: 200px!important;
+}
+
+.td-btn {
+    width: 200px!important;
+}
+
+td button {
+    max-width: 40%;
+    margin: 0 5px;
+    background: #0e5cb6;
+    color: #fff;
+    font-weight: 400;
+    cursor: pointer;
+    font-size: 1rem;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border: 0;
+    border-radius: 4px;
+}
+
+td button:hover {
+    background: #162b88;
+    box-shadow: 0 0 5px rgba(49, 109, 168, 0.9);
+}
+
+button.delete {
+    background: #c70f0f;
+    max-width: 80px;
+    padding: 8px;
+    margin: 2px;
+}
+
+button.delete:hover {
+    background: #a81c2c;
+}
+
+button.edit {
+    background: #168f1a;
+    max-width: 80px;
+    padding: 8px;
+    margin: 2px;
+}
+
+button.edit:hover {
+    background: #2e7d32;
+}
+
+.usersHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    width: 100%;
+}
+
+.edits {
+    max-width: 90px;
+    background: #168f1a;
+    font-weight: 400;
+}
+
+.edits:hover {
+    background: #2e7d32;
+}
+
+#edit {
+    text-decoration: none;
+    color: #fff;
+}
+
+.forms {
+    width: 100%;
+    background: #fff;
+    border-radius: 8px;
+    padding: 32px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    animation: fadeindown 0.25s ease-in-out;
+}
+
+.error {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 16px 0;
+    background-color: #e93737;
+    padding: 10px;
+    border-radius: 4px;
+}
