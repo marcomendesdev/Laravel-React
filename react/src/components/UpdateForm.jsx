@@ -16,7 +16,7 @@ export default function UpdateForm() {
     });
 
     const [loading, setLoading] = useState(false);
-
+    console.log("id", id);
     if (id) {
         useEffect(() => {
             setLoading(true);
@@ -24,7 +24,7 @@ export default function UpdateForm() {
                 .get(`/users/${id}`)
                 .then((response) => {
                     setUser(response.data);
-                    console.log("hello", response.data);
+                    console.log("data", response.data);
                     setLoading(false);
                 })
                 .catch((error) => {
@@ -36,15 +36,18 @@ export default function UpdateForm() {
     const onSubmit = (e) => {
         e.preventDefault();
         if (user.id) {
-            axiosClient.put(`/users/${user.id}`, user).then((response) => {
-                console.log(response);
-                navigate("/users");
-            }).catch((error) => {
-                console.log('errr',error.response.data.message);
-                if(error.response.data.message){
-                    setError(error.response.data.message);
-                }
-            });
+            axiosClient
+                .put(`/users/${user.id}`, user)
+                .then((response) => {
+                    console.log(response);
+                    navigate("/users");
+                })
+                .catch((error) => {
+                    console.log("errr", error.response.data.message);
+                    if (error.response.data.message) {
+                        setError(error.response.data.message);
+                    }
+                });
         }
     };
 
@@ -61,9 +64,6 @@ export default function UpdateForm() {
                     ) : (
                         <h1 className="title">{user.name}</h1>
                     )}
-
-
-                    
                     {error && <p className="error">{error}</p>}
                     &nbsp;
                     <input
