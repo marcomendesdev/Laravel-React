@@ -61,6 +61,9 @@ export default function UpdateForm() {
                     ) : (
                         <h1 className="title">{user.name}</h1>
                     )}
+
+
+                    
                     {error && <p className="error">{error}</p>}
                     &nbsp;
                     <input
